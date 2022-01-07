@@ -14,16 +14,18 @@ I wanted to script [MIDI](https://midi.org/) control instructions with python, a
 ## Python modules and linux add ons
 
 *  To allow python interface with MIDI, a modification of the operating system is required. It is called [Advanced Linux Sound Architecture (ALSA)](https://www.alsa-project.org/wiki/Main_Page) and is fairly straight forward to get this in place. (`sudo apt install libasound2`).
-* There are a huge load of python MIDI binding modules, however I struggled for hours finding something which worked on my machine. I had success with **[alsa-midi](https://pypi.org/project/alsa-midi/).** These are a bunch of libraries with which I failed (for some reason or the other - they obviously work for others):
+* There is a huge load of python MIDI binding modules, however I struggled for hours finding something which worked on my machine. I had success with **[alsa-midi](https://pypi.org/project/alsa-midi/).** These are a bunch of libraries with which I failed (for some reason or the other - they obviously work for others):
   * [pygame.midi](https://www.pygame.org/docs/ref/midi.html)  (though it seems widely adopted)
   * [PyAlsaAudio](https://github.com/larsimmisch/pyalsaaudio)
   * [pyalsa](https://github.com/MaurizioB/Bigglesworth/blob/master/bigglesworth/alsa.py)
   * [py-midi](https://pypi.org/project/py-midi/)
   * [mido](https://github.com/mido/mido) (though this also seems widely adopted)
 
-## The blog which was my best guide to get along
+## The best blogs
 
-[Ted's Linux MIDI Guide](http://tedfelix.com/linux/linux-midi.html) was my favourite, most useful text, which helped me get things to play. I strongly recommend to start here, if you want to get a linux system up and running with [MIDI](https://midi.org/). It helps you get ALSA up and running, includes instructions on [jack](https://jackaudio.org/) (I skipped that), and has instructions on [vmpk](https://vmpk.sourceforge.io/), which is a nice virtual MIDI keyboard.
+[Ted's Linux MIDI Guide](http://tedfelix.com/linux/linux-midi.html) was my favourite. This most useful text helped me get things to play. I strongly recommend to start here, if you want to get a linux system up and running with [MIDI](https://midi.org/). It helps you get ALSA up and running, includes instructions on [jack](https://jackaudio.org/) (I skipped that), and has instructions on [vmpk](https://vmpk.sourceforge.io/), which is a nice virtual MIDI keyboard.
+
+[Making a Synth with Python](https://python.plainenglish.io/build-your-own-python-synthesizer-part-3-162796b7d351)  is an other blog which has good descriptions on how to make a synth with python and MIDI. (I did not get the mentioned python libraries into play, but the text was still very instructive and well written).
 
 With alsa and the command line tool "aplaymidi" in place, and a MIDI connection to my piano, I could play MIDI musical files ([find examples for classical piano here](http://www.piano-midi.de/)) like this: 
 
